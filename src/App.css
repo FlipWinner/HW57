@@ -4,3 +4,15 @@
   padding: 2rem;
   text-align: center;
 }
+
+.active {
+    background-color: #82ff00;
+    width: 10px;
+    height: 10px;
+}
+
+.offline{
+    background-color: #ff0000;
+    width: 10px;
+    height: 10px;
+}

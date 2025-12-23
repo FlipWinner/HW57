@@ -1,10 +1,27 @@
 import React from 'react';
+import type { IUser } from '../../types';
+import UserProfile from './UserProfile/UserProfile.tsx';
 
-const UserList = () => {
+interface Props {
+    users: IUser[];
+    changeOnline: (id: string) => void;
+}
+
+const UserList: React.FC<Props> = ({ users, changeOnline }) => {
 	return (
-		<div>
-            
-		</div>
+		<>
+			{users.map(user => (
+				<UserProfile
+					key={user.id}
+					name={user.name}
+					online={user.online}
+					id={user.id}
+					email={user.email}
+					role={user.role}>
+					<input type="checkbox" onChange={() => changeOnline(user.id)} />
+				</UserProfile>
+			))}
+		</>
 	);
 };
 
