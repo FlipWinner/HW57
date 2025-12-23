@@ -19,5 +19,15 @@ export default defineConfig([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+      rules: {
+          // indent: ['error', 2],
+          indent: ['error', 'tab'],
+          quotes: ['error', 'single'],
+          'linebreak-style': ['error', 'unix'],
+          semi: ['error', 'always'],
+          'object-curly-spacing': ['error', 'always'],
+          'function-paren-newline': ['error', 'multiline-arguments'],
+          'no-mixed-spaces-and-tabs': 'error',
+      }
   },
 ])
