@@ -31,7 +31,8 @@ const App = () => {
             
 			<main className="row">
 				<UserForm addUser={addUser}/>
-				<div className='col'>
+				<div className='col bg-warning border border-5 rounded-3 p-4'>
+					<h2>Users</h2>
 					<UserList users={users} changeOnline={changeOnline}/>
 				</div>
 			</main>

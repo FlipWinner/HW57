@@ -44,7 +44,8 @@ const UserForm: React.FC<Props> = ({ addUser }) => {
 	};
     
 	return (
-		<div className="col border border-5">
+		<div className="col-5 border border-5 rounded-3 p-4 bg-warning">
+			<h2>User Application</h2>
 			<form onSubmit={onSubmit} className="form row">
 				<label htmlFor="name">Name:</label>
 				<input className='mb-3' type="text" name="name" value={form.name} onChange={onInputChange} />
